@@ -133,3 +133,12 @@ git subtree push --prefix dist origin gh-pages
 ```
 
 Just make sure `dist` is the folder name containing the deployment files
+
+OPTIONAL: Add a script in `package.json` to automate deployment to github pages
+
+```json
+"scripts": {
+    ...
+    "deploy": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages"
+},
+```
