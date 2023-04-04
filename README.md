@@ -89,7 +89,7 @@ This assignment is basically familiarization on how to install webpack, the conc
     ```json
     "scripts": {
         "dev": "webpack-dev-server",
-        "build": "webpack"
+        "build": "webpack",
     },
     ```
 
