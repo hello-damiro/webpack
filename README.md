@@ -4,6 +4,8 @@
 
 This assignment is basically familiarization on how to install webpack, the concept behind webpack and how useful it is for web development.
 
+LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
+
 </br>
 
 ## Installation procedure
@@ -109,3 +111,25 @@ This assignment is basically familiarization on how to install webpack, the conc
 
     console.log('Hello damiro ' + tripler(5));
     ```
+
+</br>
+
+## Deploying to gIthub.io pages
+
+Original article [here:](https://gist.github.com/cobyism/4730490)
+
+Assume that we need to publish `dist` directory to github pages
+
+1. Make sure git knows about your subtree (the subfolder with your site).
+
+```bach
+git add dist && git commit -m "Initial dist subtree commit"
+```
+
+2. Use subtree push to send it to the `gh-pages` branch on GitHub
+
+```bach
+git subtree push --prefix dist origin gh-pages
+```
+
+Just make sure `dist` is the folder name containing the deployment files
