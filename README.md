@@ -309,14 +309,7 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     }
     ```
 
-From here it is optional if we may continnue to use tailwind CSS
-
-1. To install Tailwind CSS
-
-    ```bash
-    npm i -D postcss postcss-loader postcss-preset-env
-    npm i -D tailwindcss
-    ```
+From here it is optional if we may continue to use tailwind CSS. Check out `tailwind` branch on this repo.
 
 </br>
 
