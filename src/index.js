@@ -1,5 +1,6 @@
+if (module.hot) module.hot.accept(); // include this
+
 import { tripler } from './module';
+import './styles/style.css';
 
-if (module.hot) module.hot.accept();
-
-console.log('Hello damiro!' + tripler(50));
+console.log('Hello damiro ' + tripler(8));
