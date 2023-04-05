@@ -9,7 +9,7 @@
         "clean": "rm -rf dist/*",
         "build": "npm run clean && npm run deploy",
         "analyze": "webpack-bundle-analyzer --analyze",
-        "gh": "git subtree push --prefix dist origin gh-pages"
+        "push": "git subtree push --prefix dist origin gh-pages"
     },
     "author": "",
     "license": "ISC",
@@ -22,7 +22,6 @@
         "html-webpack-plugin": "^5.5.0",
         "style-loader": "^3.3.2",
         "webpack": "^5.77.0",
-        "webpack-bundle-analyzer": "^4.8.0",
         "webpack-cli": "^5.0.1",
         "webpack-dev-server": "^4.13.2"
     }

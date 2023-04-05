@@ -1,11 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     mode: 'production', // use 'development' if necessary
     entry: {
-        bundle: path.resolve(__dirname, 'src/index.js'),
+        bundle: path.resolve(__dirname, 'src/index.js'), // main source file
     },
     output: {
         filename: '[name].js', // '[name]-[contenthash].js', // will inherit the name from the entry
@@ -20,8 +19,8 @@ module.exports = {
             directory: path.resolve(__dirname, 'dist'),
         },
         port: 8080,
-        open: true,
-        hot: true,
+        open: true, // open browser
+        hot: true, // hot reload
         compress: true, // enable gzip compression
         historyApiFallback: true, // enable browser history fallback
     },
@@ -78,6 +77,5 @@ module.exports = {
             template: 'src/template.html', // src/template.html
             favicon: 'src/assets/images/favicon.png', // favicon
         }),
-        // new BundleAnalyzerPlugin(), // access though localhost:8888. nly runs on dev server
     ],
 };
