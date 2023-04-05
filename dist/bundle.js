@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module */ \"./src/module.js\");\n\n\nif (false) {}\n\nconsole.log('Hello damiro ' + (0,_module__WEBPACK_IMPORTED_MODULE_0__.tripler)(5));\n\n\n//# sourceURL=webpack://webpack/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module */ \"./src/module.js\");\n\n\nif (false) {}\n\nconsole.log('Hello damiro!' + (0,_module__WEBPACK_IMPORTED_MODULE_0__.tripler)(50));\n\n\n//# sourceURL=webpack://webpack/./src/index.js?");
 
 /***/ }),
 
