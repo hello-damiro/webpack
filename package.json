@@ -4,7 +4,7 @@
     "description": "Webpack Assignment Submission for Odin",
     "source": "./src/template.html",
     "scripts": {
-        "dev": "webpack-dev-server --open",
+        "dev": "webpack serve --mode=development --open",
         "deploy": "webpack",
         "clean": "rm -rf dist/*",
         "build": "npm run clean && npm run deploy",

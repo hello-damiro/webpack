@@ -12,6 +12,8 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
 
 ## Installation procedure
 
+---
+
 1. Initialize npm
 
     ```bash
@@ -156,7 +158,7 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     a. `html-webpack-plugin` is using the a loader with lodash template syntax - to make the loader aware of the image you can use this syntax: `<img src="<%= require('./logo.png' %>">`
 
     b. Another option is to use a different webpack loader which supports automatic html parsing and resource loading - one example for that is the `html-loader`
-    
+
     c. The third option is to use the `copy-webpack-plugin` to copy the files to the dist folder
 
     _We choose #2, Install `html-loader`_
@@ -276,14 +278,7 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     },
     ```
 
-10. Tailwind CSS
-
-    ```bash
-    npm i -D postcss postcss-loader postcss-preset-env
-    npm i -D tailwindcss
-    ```
-
-11. On main index file `index.js` include the following line to use hot reload much like how the _live server_ extension of vs code is doing
+10. On main index file `index.js` include the following line to use hot reload much like how the _live server_ extension of vs code is doing
 
     ```js
     import { tripler } from './module';
@@ -299,9 +294,20 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     }
     ```
 
+From here it is optional if we may continnue to use tailwind CSS
+
+1. To install Tailwind CSS
+
+    ```bash
+    npm i -D postcss postcss-loader postcss-preset-env
+    npm i -D tailwindcss
+    ```
+
 </br>
 
 ## Deploying to gIthub.io pages
+
+---
 
 Original article [here:](https://gist.github.com/cobyism/4730490)
 
