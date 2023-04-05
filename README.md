@@ -185,7 +185,22 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     }
     ```
 
-7. **CSS loaders**
+7. To enable hot relaod for HTML files while developing on `src` directory, configure `liveReload: true` on `webpack.config.js` devServer parameter. Notice that live reload will only work when `hot` is `false`
+
+    ```js
+    module.exports = {
+        ...
+        devServer: {
+            ...
+            hot: false, // hot reload
+            liveReload: true, // if this is true, hot should be false.
+            ...
+        },
+        ...
+    }
+    ```
+
+8. **CSS loaders**
 
     ```bash
     npm i -D style-loader css-loader
@@ -236,7 +251,7 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     ...
     ```
 
-8. **SCSS loader**
+9. **SCSS loader**
 
     ```bach
     npm i -D sass sass-loader
@@ -248,7 +263,7 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     test: /\.scss$/,
     ```
 
-9. Install **Babel** for backwards compatibility of some JS new features for    older browsers such as `type='module'` in `<script type='module' src='/' defer>` script tag
+10. Install **Babel** for backwards compatibility of some JS new features for    older browsers such as `type='module'` in `<script type='module' src='/' defer>` script tag
 
     ```bash
     npm i -D babel-loader @babel/core @babel/preset-env
@@ -278,7 +293,7 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     },
     ```
 
-10. On main index file `index.js` include the following line to use hot reload much like how the _live server_ extension of vs code is doing
+11. On main index file `index.js` include the following line to use hot reload much like how the _live server_ extension of vs code is doing
 
     ```js
     import { tripler } from './module';

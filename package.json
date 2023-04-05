@@ -5,7 +5,7 @@
     "source": "./src/template.html",
     "scripts": {
         "dev": "webpack serve --mode=development --open",
-        "deploy": "webpack",
+        "deploy": "webpack --mode=production",
         "clean": "rm -rf dist/*",
         "build": "npm run clean && npm run deploy",
         "analyze": "webpack-bundle-analyzer --analyze",

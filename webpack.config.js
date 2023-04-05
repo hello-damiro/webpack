@@ -20,7 +20,8 @@ module.exports = {
         },
         port: 8080,
         open: true, // open browser
-        hot: true, // hot reload
+        hot: false, // hot reload
+        liveReload: true, // if this is true, hot should be false
         compress: true, // enable gzip compression
         historyApiFallback: true, // enable browser history fallback
     },
