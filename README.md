@@ -318,6 +318,77 @@ From here it is optional if we may continnue to use tailwind CSS
     npm i -D tailwindcss
     ```
 
+2. Initialize tailwind
+
+    ```bash
+     npx tailwindcss init -p
+    ```
+
+    this will create a `tailwind.config.js`, a tailwind config file. Supply the content parameter with values
+
+    ```js
+    content: ['./src/*.{html,js}'],
+    ```
+
+3. Create a `.postcssrc` file that will contain the following
+
+    ```json
+    {
+        "plugins": {
+            "tailwindcss": {}
+        }
+    }
+    ```
+
+4. Edit the CSS loaders to use `postcss-loader`
+
+    ```js
+    module: {
+        rules: [
+            ...
+            {
+                // CSS LOADERS WITH MODULES
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'postcss-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1, // applies CSS modules on @imported resources
+                            modules: true, // enable CSS modules
+                        },
+                    },
+                ],
+                include: /\.module\.css$/,
+            },
+            {
+                // CSS LOADERS ONLY
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader', 'postcss-loader'],
+                exclude: /\.module\.css$/,
+            },
+            ...
+        ]
+    }
+    ```
+
+5. empty the `style.css` and insert the following:
+
+    ```css
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+    ```
+
+6. test tailwinid on `template.html`
+
+    ```html
+    ...
+    <h1 class="text-fuchsia-400 font-bold text-4xl uppercase">Hello World!</h1>
+    ...
+    ```
+
 </br>
 
 ## Deploying to gIthub.io pages
