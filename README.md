@@ -41,15 +41,15 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     dist
     node_modules
     src
-      |--- assets
-      |     |--- images
-      |     |     |--- favicon.png
-      |     |--- styles
-      |           |--- reset.css
-      |           |--- style.css
-      |--- index.js
-      |--- module.js
-      |--- template.html
+      ┝--- assets
+      |     ┝--- images
+      |     |     ┕--- favicon.png
+      |     ┕--- styles
+      |           ┝--- reset.css
+      |           ┕--- style.css
+      ┝--- index.js
+      ┝--- module.js
+      ┕--- template.html
     .gitignore
     .prettierignore
     package-lock.json
