@@ -9,6 +9,7 @@
         "clean": "rm -rf dist/*",
         "build": "npm run clean && npm run deploy",
         "analyze": "webpack-bundle-analyzer --analyze",
+        "test": "jest --verbose ./src/js/",
         "push": "git subtree push --prefix dist origin gh-pages"
     },
     "author": "",
