@@ -14,6 +14,7 @@
     },
     "author": "",
     "license": "ISC",
+    "main": "webpack.config.js",
     "devDependencies": {
         "@babel/core": "^7.21.4",
         "@babel/preset-env": "^7.21.4",

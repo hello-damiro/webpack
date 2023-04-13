@@ -73,7 +73,7 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
             path: path.resolve(__dirname, 'dist'),
             clean: true, // delete exess files every issues of build command
         },
-        // devtool: 'source-map', // filename.map.js files use for debugging
+        devtool: 'source-map', // filename.map.js files use for debugging
         devServer: {
             static: {
                 directory: path.resolve(__dirname, 'dist'),
@@ -109,7 +109,19 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     }
     ```
 
-    a. The following are suggested cripts inside `scripts` array contains keywords to be used for workflow automation in development.
+    a. Add `source` key:value pair, since webpack will replace the `main` with its file
+
+    ```json
+    "source": "./src/template.html",
+    ```
+
+    where:
+
+    ```json
+    "main": "webpack.config.js",
+    ```
+
+    b. The following are suggested cripts inside `scripts` array contains keywords to be used for workflow automation in development.
 
     ```json
     "scripts": {
@@ -121,7 +133,7 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     },
     ```
 
-    b. to use the scripts
+    c. to use the scripts
 
     ```bash
     npm run dev

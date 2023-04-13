@@ -12,7 +12,7 @@ module.exports = {
         clean: true,
         assetModuleFilename: '[name][ext]', // used primarily for image loaders to use original filename
     },
-    // devtool: 'source-map', // filename.map.js files use for debugging
+    devtool: 'source-map', // filename.map.js files use for debugging
     devServer: {
         static: {
             // what directory to serve
