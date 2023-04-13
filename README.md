@@ -200,7 +200,22 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     }
     ```
 
-8. **CSS loaders**
+8. **Jest** for Test Driven Development
+
+    ```bash
+    npm i -D jest jest-cli
+    ```
+
+    This requires babel. Also, script on `package.json`
+
+    ```json
+    "scripts": {
+        ...
+        "test": "jest --verbose ./src/js/",
+    },
+    ```
+
+9. **CSS loaders**
 
     ```bash
     npm i -D style-loader css-loader
@@ -251,7 +266,7 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     ...
     ```
 
-9. **SCSS loader**
+10. **SCSS loader**
 
     ```bach
     npm i -D sass sass-loader
@@ -263,7 +278,7 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     test: /\.scss$/,
     ```
 
-10. Install **Babel** for backwards compatibility of some JS new features for    older browsers such as `type='module'` in `<script type='module' src='/' defer>` script tag
+11. Install **Babel** for backwards compatibility of some JS new features for    older browsers such as `type='module'` in `<script type='module' src='/' defer>` script tag
 
     ```bash
     npm i -D babel-loader @babel/core @babel/preset-env
