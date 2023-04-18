@@ -1,8 +1,8 @@
 # webpack
 
-## Webpack Boilerplate
+## Webpack Starter
 
-This boilerplate is primarily an assignment from the Odin Project. It is basically familiarization on how to install webpack, the concept behind webpack and how useful it is for web development.
+This boilerplate is primarily an assignment from [the Odin Project](https://www.theodinproject.com/). It is basically familiarization on how to install webpack,understanding the concept behind webpack and how useful it is for web development workflow.
 
 The Assignment also focuses on how to work around webpack and npm library and how the two works. It focuses also on the understanding behind the webpacks plugins and loaders.
 
@@ -32,14 +32,13 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
 3. Structure directories. Create `src` that will house source codes and `dist` that will house bundled codes of the entire project that will automatically generate by webpack.
 
     ```bash
-    mkdir dist src src/styles src/assets src/assets/images src/assets/fonts && touch src/index.js src/template.html src/styles/style.css
+    mkdir dist src src/styles src/assets src/assets/images src/assets/fonts && touch src/index.js src/template.html src/styles/style.css webpack.config.js .gitignore
     ```
 
     Structure:
 
     ```js
     dist
-    node_modules
     src
       ┝--- assets
       |     ┝--- images
@@ -48,17 +47,13 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
       |           ┝--- reset.css
       |           ┕--- style.css
       ┝--- index.js
-      ┝--- module.js
       ┕--- template.html
     .gitignore
-    .prettierignore
-    package-lock.json
-    package.json
     README.md
     webpack.config.js
     ```
 
-4. Create `webpack.config.js` file. This will house configurations of webpack. Put the following onto this file.
+4. Open the newly created `webpack.config.js` file. This will house configurations of webpack. Put the following onto this file.
 
     ```js
     const path = require('path');
@@ -320,7 +315,7 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     },
     ```
 
-11. On main index file `index.js` include the following line to use hot reload much like how the _live server_ extension of vs code is doing
+12. On main index file `index.js` include the following line to use hot reload much like how the _live server_ extension of vs code is doing
 
     ```js
     import { tripler } from './module';
@@ -334,6 +329,12 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     export function tripler(x) {
         return x * 3;
     }
+    ```
+
+13. House the files that you dont want to be on github, such as the `node_modules` or maybe the `dist` directory if youo you dont plan to make a preview website on github.io
+
+    ```text
+    node_modules
     ```
 
 From here it is optional if we may continue to use tailwind CSS. Check out `tailwind` branch on this repo.
