@@ -22,11 +22,10 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
 
     This will generate `package.json` file that wiill contain dependencies of the project. All other js library dependencies will be configured here.
 
-2. Install dev dependencies: `i` means install. `d` means dev dependency
+2. Install webpack dev dependencies: `i` means install. `d` means dev dependency
 
     ```bash
-    npm i -D webpack webpack-cli
-    npm i -D webpack-dev-server
+    npm i -D webpack webpack-cli webpack-dev-server
     ```
 
 3. Structure directories. Create `src` that will house source codes and `dist` that will house bundled codes of the entire project that will automatically generate by webpack.
@@ -104,7 +103,7 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     }
     ```
 
-    a. Add `source` key:value pair, since webpack will replace the `main` with its file
+    a. Add `source` *key:value* pair, since webpack will replace the `main` with its file
 
     ```json
     "source": "./src/template.html",
@@ -116,7 +115,7 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
     "main": "webpack.config.js",
     ```
 
-    b. The following are suggested cripts inside `scripts` array contains keywords to be used for workflow automation in development.
+    b. The following are suggested scripts inside `scripts` array contains keywords to be used for workflow automation in development.
 
     ```json
     "scripts": {
@@ -124,7 +123,6 @@ LIVE SITE [HERE:](https://hello-damiro.github.io/webpack/)
         "deploy": "webpack",
         "clean": "rm -rf dist/*",
         "build": "npm run clean && npm run deploy",
-        "analyze": "webpack-bundle-analyzer --analyze",
     },
     ```
 
